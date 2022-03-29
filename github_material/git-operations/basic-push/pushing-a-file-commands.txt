@@ -1,0 +1,681 @@
+
+Pranau@Pranau-T410 MINGW64 /e/Training
+$ cd GitHub
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub
+$ cd Week1/
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1
+$ git clone https://github.com/Pranau-R/Training_Week1.git
+Cloning into 'Training_Week1'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1
+$ cd Training_Week1/
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (main)
+$ git checkout -b issue1
+Switched to a new branch 'issue1'
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git status
+On branch issue1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Quotient-and-Remainder/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git add Quotient-and-Remainder/
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git status
+On branch issue1
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Quotient-and-Remainder/app/Comp-Quotient-and-Remainder.exe
+        new file:   Quotient-and-Remainder/doc/Comp-Quotieny-and-Remainder.docx
+        new file:   Quotient-and-Remainder/issue/issue1/compile_issue1_20220216a.docx
+        new file:   Quotient-and-Remainder/issue/issue1/issue1_log_20220216a.txt
+        new file:   Quotient-and-Remainder/src/Comp-Quotient-and-Remainder.c
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git commit -m '#1: added Quotient and reminder files'
+[issue1 6693c0e] #1: added Quotient and reminder files
+ 5 files changed, 16 insertions(+)
+ create mode 100644 Quotient-and-Remainder/app/Comp-Quotient-and-Remainder.exe
+ create mode 100644 Quotient-and-Remainder/doc/Comp-Quotieny-and-Remainder.docx
+ create mode 100644 Quotient-and-Remainder/issue/issue1/compile_issue1_20220216a.docx
+ create mode 100644 Quotient-and-Remainder/issue/issue1/issue1_log_20220216a.txt
+ create mode 100644 Quotient-and-Remainder/src/Comp-Quotient-and-Remainder.c
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git status
+On branch issue1
+nothing to commit, working tree clean
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git push
+fatal: The current branch issue1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin issue1
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git push --set-upstream origin
+HEAD          issue1        main          origin/HEAD   origin/main
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git push --set-upstream origin issue1
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (13/13), 327.53 KiB | 5.96 MiB/s, done.
+Total 13 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'issue1' on GitHub by visiting:
+remote:      https://github.com/Pranau-R/Training_Week1/pull/new/issue1
+remote:
+To https://github.com/Pranau-R/Training_Week1.git
+ * [new branch]      issue1 -> issue1
+branch 'issue1' set up to track 'origin/issue1'.
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git status
+On branch issue1
+Your branch is up to date with 'origin/issue1'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git diff
+diff --git a/README.md b/README.md
+index 15d467c..9c705fc 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,6 @@
+ # Training_Week1
+ This is a repo to save all my week 1 files
++
++Week 1 training consist of tasks below:
++
++- [Quotient and Reminder](https://github.com/Pranau-R/Training_Week1/issues/1)
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git diff
+diff --git a/README.md b/README.md
+index 15d467c..741009f 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,6 @@
+ # Training_Week1
+ This is a repo to save all my week 1 files
++
++Week 1 training consist of tasks below:
++
++- [Quotient and Reminder](https://github.com/Pranau-R/Training_Week1/issues/1)
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git diff
+diff --git a/README.md b/README.md
+index 15d467c..d4cf39a 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,8 @@
+ # Training_Week1
+ This is a repo to save all my week 1 files
++
++Week 1 training consist of tasks below:
++
++- [Quotient and Reminder](https://github.com/Pranau-R/Training_Week1/issues/1)
++
++
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git diff
+diff --git a/README.md b/README.md
+index 15d467c..9c705fc 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,6 @@
+ # Training_Week1
+ This is a repo to save all my week 1 files
++
++Week 1 training consist of tasks below:
++
++- [Quotient and Reminder](https://github.com/Pranau-R/Training_Week1/issues/1)
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git diff
+diff --git a/README.md b/README.md
+index 15d467c..9c705fc 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,6 @@
+ # Training_Week1
+ This is a repo to save all my week 1 files
++
++Week 1 training consist of tasks below:
++
++- [Quotient and Reminder](https://github.com/Pranau-R/Training_Week1/issues/1)
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git diff
+diff --git a/README.md b/README.md
+index 15d467c..9c705fc 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,6 @@
+ # Training_Week1
+ This is a repo to save all my week 1 files
++
++Week 1 training consist of tasks below:
++
++- [Quotient and Reminder](https://github.com/Pranau-R/Training_Week1/issues/1)
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git add README.md
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git status
+On branch issue1
+Your branch is up to date with 'origin/issue1'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git commit
+Aborting commit due to empty commit message.
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git commit -m 'READ.md is updated with task'
+[issue1 0ff7199] READ.md is updated with task
+ 1 file changed, 4 insertions(+)
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git status
+On branch issue1
+Your branch is ahead of 'origin/issue1' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 447 bytes | 223.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Pranau-R/Training_Week1.git
+   6693c0e..0ff7199  issue1 -> issue1
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git branch
+* issue1
+  main
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ ls
+Quotient-and-Remainder/  README.md
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git status
+On branch issue1
+Your branch is up to date with 'origin/issue1'.
+
+nothing to commit, working tree clean
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git checkput -b issue3
+git: 'checkput' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue1)
+$ git checkout -b issue3
+Switched to a new branch 'issue3'
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ ls
+Quotient-and-Remainder/  README.md
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git branch
+  issue1
+* issue3
+  main
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ ls
+HelloWorld/  Quotient-and-Remainder/  README.md
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git status
+On branch issue3
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        HelloWorld/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git add HelloWorld/
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git status
+On branch issue3
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   HelloWorld/App/HelloWorld.exe
+        new file:   HelloWorld/Doc/HelloWorld.docx
+        new file:   HelloWorld/Doc/HelloWorldFL.docx
+        new file:   HelloWorld/src/HelloWorld.c
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git commit -m '#3: added Hello World'
+[issue3 ed4dbeb] #3: added Hello World
+ 4 files changed, 6 insertions(+)
+ create mode 100644 HelloWorld/App/HelloWorld.exe
+ create mode 100644 HelloWorld/Doc/HelloWorld.docx
+ create mode 100644 HelloWorld/Doc/HelloWorldFL.docx
+ create mode 100644 HelloWorld/src/HelloWorld.c
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git status
+On branch issue3
+nothing to commit, working tree clean
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git push
+fatal: The current branch issue3 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin issue3
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git push --set-upstream origin issue3
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (25/25), done.
+Writing objects: 100% (29/29), 1.59 MiB | 2.16 MiB/s, done.
+Total 29 (delta 1), reused 2 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'issue3' on GitHub by visiting:
+remote:      https://github.com/Pranau-R/Training_Week1/pull/new/issue3
+remote:
+To https://github.com/Pranau-R/Training_Week1.git
+ * [new branch]      issue3 -> issue3
+branch 'issue3' set up to track 'origin/issue3'.
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git status
+On branch issue3
+Your branch is up to date with 'origin/issue3'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git add README.md
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git status
+On branch issue3
+Your branch is up to date with 'origin/issue3'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git commit
+Aborting commit due to empty commit message.
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git commit -m 'README.md is updated with hello world'
+[issue3 1583faa] README.md is updated with hello world
+ 1 file changed, 1 insertion(+)
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git status
+On branch issue3
+Your branch is ahead of 'origin/issue3' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 326 bytes | 326.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Pranau-R/Training_Week1.git
+   ed4dbeb..1583faa  issue3 -> issue3
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git branch -d issue1
+Deleted branch issue1 (was 0ff7199).
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ cd main
+bash: cd: main: No such file or directory
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ cd ..
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1
+$ cd Training_Week1/
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue3)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (main)
+$ git branch -d issue3
+warning: deleting branch 'issue3' that has been merged to
+         'refs/remotes/origin/issue3', but not yet merged to HEAD.
+Deleted branch issue3 (was 1583faa).
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (main)
+$ git checkout -b issue5
+Switched to a new branch 'issue5'
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git status
+On branch issue5
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Git/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git add Git/
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git status
+On branch issue5
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Git/Doc/Git-Installed.docx
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git status
+On branch issue5
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Git/Doc/Git-Installed.docx
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git diff
+diff --git a/README.md b/README.md
+index 15d467c..5293ebe 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,8 @@
+ # Training_Week1
+ This is a repo to save all my week 1 files
++
++Week 1 training consist of tasks below:
++
++- [Quotient and Reminder](https://github.com/Pranau-R/Training_Week1/issues/1)
++- [Hello World](https://github.com/Pranau-R/Training_Week1/issues/3)
++- [GitHub Installation](https://github.com/Pranau-R/Training_Week1/issues/5)
+\ No newline at end of file
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git add README.md
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git status
+On branch issue5
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Git/Doc/Git-Installed.docx
+        modified:   README.md
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git status
+On branch issue5
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Git/Doc/Git-Installed.docx
+        modified:   README.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git diff
+diff --git a/README.md b/README.md
+index 5293ebe..8310d70 100644
+--- a/README.md
++++ b/README.md
+@@ -5,4 +5,4 @@ Week 1 training consist of tasks below:
+
+ - [Quotient and Reminder](https://github.com/Pranau-R/Training_Week1/issues/1)
+ - [Hello World](https://github.com/Pranau-R/Training_Week1/issues/3)
+-- [GitHub Installation](https://github.com/Pranau-R/Training_Week1/issues/5)
+\ No newline at end of file
++- [Git Installation](https://github.com/Pranau-R/Training_Week1/issues/5)
+\ No newline at end of file
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git add README.md
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git status
+On branch issue5
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Git/Doc/Git-Installed.docx
+        modified:   README.md
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git commit -m '#5: added Git installation'
+[issue5 b82e0a4] #5: added Git installation
+ 2 files changed, 6 insertions(+)
+ create mode 100644 Git/Doc/Git-Installed.docx
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git status
+On branch issue5
+nothing to commit, working tree clean
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git push
+fatal: The current branch issue5 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin issue5
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git push --set-upstream origin issue5
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (9/9), 199.50 KiB | 6.65 MiB/s, done.
+Total 9 (delta 1), reused 2 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'issue5' on GitHub by visiting:
+remote:      https://github.com/Pranau-R/Training_Week1/pull/new/issue5
+remote:
+To https://github.com/Pranau-R/Training_Week1.git
+ * [new branch]      issue5 -> issue5
+branch 'issue5' set up to track 'origin/issue5'.
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue5)
+$ git checkout -b issue7
+Switched to a new branch 'issue7'
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue7)
+$ git status
+On branch issue7
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Learning-cmd/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue7)
+$ git add Learning-cmd/
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue7)
+$ git status
+On branch issue7
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Learning-cmd/Git-command/Git-command-Practice.txt
+        new file:   Learning-cmd/Git-command/GitCommand-Training.docx
+        new file:   Learning-cmd/GitHub-Creating-Repo/Github-Practice.docx
+        new file:   Learning-cmd/Linux-command/Linux-Command-Practice.docx
+        new file:   Learning-cmd/Linux-command/LinuxSystemCommands-Basic.txt
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue7)
+$ git status
+On branch issue7
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Learning-cmd/Git-command/Git-command-Practice.txt
+        new file:   Learning-cmd/Git-command/GitCommand-Training.docx
+        new file:   Learning-cmd/GitHub-Creating-Repo/Github-Practice.docx
+        new file:   Learning-cmd/Linux-command/Linux-Command-Practice.docx
+        new file:   Learning-cmd/Linux-command/LinuxSystemCommands-Basic.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue7)
+$ git diff
+diff --git a/README.md b/README.md
+index 8310d70..e3acbf8 100644
+--- a/README.md
++++ b/README.md
+@@ -5,4 +5,5 @@ Week 1 training consist of tasks below:
+
+ - [Quotient and Reminder](https://github.com/Pranau-R/Training_Week1/issues/1)
+ - [Hello World](https://github.com/Pranau-R/Training_Week1/issues/3)
+-- [Git Installation](https://github.com/Pranau-R/Training_Week1/issues/5)
+\ No newline at end of file
++- [Git Installation](https://github.com/Pranau-R/Training_Week1/issues/5)
++- [Git and Linux Commands](https://github.com/Pranau-R/Training_Week1/issues/7)
+\ No newline at end of file
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue7)
+$ git add README.md
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue7)
+$ git status
+On branch issue7
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Learning-cmd/Git-command/Git-command-Practice.txt
+        new file:   Learning-cmd/Git-command/GitCommand-Training.docx
+        new file:   Learning-cmd/GitHub-Creating-Repo/Github-Practice.docx
+        new file:   Learning-cmd/Linux-command/Linux-Command-Practice.docx
+        new file:   Learning-cmd/Linux-command/LinuxSystemCommands-Basic.txt
+        modified:   README.md
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue7)
+$ git commit -m '#7: adding documents related to git and linux cmds'
+[issue7 717f1aa] #7: adding documents related to git and linux cmds
+ 6 files changed, 1219 insertions(+), 1 deletion(-)
+ create mode 100644 Learning-cmd/Git-command/Git-command-Practice.txt
+ create mode 100644 Learning-cmd/Git-command/GitCommand-Training.docx
+ create mode 100644 Learning-cmd/GitHub-Creating-Repo/Github-Practice.docx
+ create mode 100644 Learning-cmd/Linux-command/Linux-Command-Practice.docx
+ create mode 100644 Learning-cmd/Linux-command/LinuxSystemCommands-Basic.txt
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue7)
+$ git status
+On branch issue7
+nothing to commit, working tree clean
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue7)
+$ git push --set-upstream issue7
+fatal: 'issue7' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue7)
+$ git push
+fatal: The current branch issue7 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin issue7
+
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue7)
+$ git push --set-upstream origin issue7
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (21/21), 720.98 KiB | 7.14 MiB/s, done.
+Total 21 (delta 2), reused 2 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+remote:
+remote: Create a pull request for 'issue7' on GitHub by visiting:
+remote:      https://github.com/Pranau-R/Training_Week1/pull/new/issue7
+remote:
+To https://github.com/Pranau-R/Training_Week1.git
+ * [new branch]      issue7 -> issue7
+branch 'issue7' set up to track 'origin/issue7'.
+
+Pranau@Pranau-T410 MINGW64 /e/Training/GitHub/Week1/Training_Week1 (issue7)
+$

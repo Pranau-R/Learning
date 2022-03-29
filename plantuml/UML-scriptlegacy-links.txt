@@ -1,0 +1,3 @@
+https://plantuml.com/activity-diagram-legacy - old legacy
+
+https://plantuml.com/activity-diagram-beta - new and simplified legacy
