@@ -1,0 +1,264 @@
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop
+$ git --version
+git version 2.35.1.windows.2
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop
+$ mkdir mygit
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop
+$ cd mygit
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit
+$ git init
+Initialized empty Git repository in C:/Users/Pranau/Desktop/mygit/.git/
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ touch one.txt
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        one.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git add one.txt
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   one.txt
+
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git rm --cached one.txt
+rm 'one.txt'
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        one.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git add one.txt
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git diff
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ vi one.txt
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   one.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   one.txt
+
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git diff
+warning: LF will be replaced by CRLF in one.txt.
+The file will have its original line endings in your working directory
+diff --git a/one.txt b/one.txt
+index e69de29..5a062af 100644
+--- a/one.txt
++++ b/one.txt
+@@ -0,0 +1 @@
++One.txt file is added
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git commit -m 'one.txt file is added and written some text in it.'
+[master (root-commit) adcefb3] one.txt file is added and written some text in it.
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 one.txt
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git log
+commit adcefb380221f994e5f1ae9029bc6b44cd1c0ce8 (HEAD -> master)
+Author: PranauR <ajaypranauer10@gmail.com>
+Date:   Mon Feb 21 01:53:50 2022 +0530
+
+    one.txt file is added and written some text in it.
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ cat one.txt
+One.txt file is added
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git commit -m 'add some text'
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   one.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git commit one.txt
+warning: LF will be replaced by CRLF in one.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in one.txt.
+The file will have its original line endings in your working directory
+hint: Waiting for your editor to close the file...
+
+
+
+
+
+
+
+
+Aborting commit due to empty commit message.
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git commit -m 'add some text'
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   one.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git commit -a one.txt
+fatal: paths 'one.txt ...' with -a does not make sense
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git commit one.txt
+warning: LF will be replaced by CRLF in one.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in one.txt.
+The file will have its original line endings in your working directory
+[master 5ea116f] First commit
+ 1 file changed, 1 insertion(+)
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git branch
+* master
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git branch br1
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git checkout br1
+Switched to branch 'br1'
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (br1)
+$ git checkout master
+Switched to branch 'master'
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git branch -d br1
+Deleted branch br1 (was 5ea116f).
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git branch
+* master
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ ^C
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$
+
+
+
+
+-----------------------------------------------------------------------
+
+Today continuation:
+
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop
+$ cd mygit
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ ls
+one.txt
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git branch
+* master
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git remote origin https://github.com/Pranau-R/Tutorial.git
+error: Unknown subcommand: origin
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git remote
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git remote show origin
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$ git remote show
+
+Pranau@Pranau-T410 MINGW64 ~/Desktop/mygit (master)
+$
+
+
+Link Referred: https://youtu.be/skIdYBafo9A

@@ -1,0 +1,111 @@
+Pranau@Pranau-T410 MINGW64 /e
+$ mkdir clonegit
+
+Pranau@Pranau-T410 MINGW64 /e
+$ cd clonegit
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit
+$ git clone https://github.com/Pranau-R/Cloning-Repo.git
+Cloning into 'Cloning-Repo'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit
+$ ls
+ Cloning-Repo/   Cloning-a-Repo.docx  '~$oning-a-Repo.docx'
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit
+$ git remote -v
+fatal: not a git repository (or any of the parent directories): .git
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit
+$ cd Cloning-Repo/
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit/Cloning-Repo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit/Cloning-Repo (main)
+$ ls
+README.md
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit/Cloning-Repo (main)
+$ cd README.md
+bash: cd: README.md: Not a directory
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit/Cloning-Repo (main)
+$ touch two.txt
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit/Cloning-Repo (main)
+$ git add two.txt
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit/Cloning-Repo (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   two.txt
+
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit/Cloning-Repo (main)
+$ git commit -m 'This is a cloning commit'
+[main beb4b56] This is a cloning commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 two.txt
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit/Cloning-Repo (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit/Cloning-Repo (main)
+$ git log
+commit beb4b5667be9d52f105193085c586fb9350ca5bd (HEAD -> main)
+Author: PranauR <ajaypranauer10@gmail.com>
+Date:   Mon Feb 21 11:17:33 2022 +0530
+
+    This is a cloning commit
+
+commit 944df74ae932b0538a995eeb3927d79e1e82c710 (origin/main, origin/HEAD)
+Author: Pranau R <99791961+Pranau-R@users.noreply.github.com>
+Date:   Mon Feb 21 10:56:25 2022 +0530
+
+    Initial commit
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit/Cloning-Repo (main)
+$ git push origin main
+fatal: An error occurred while sending the request.
+fatal: The request was aborted: Could not create SSL/TLS secure channel.
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/Pranau-R/Cloning-Repo.git/'
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit/Cloning-Repo (main)
+$ git push origin main
+fatal: An error occurred while sending the request.
+fatal: The request was aborted: Could not create SSL/TLS secure channel.
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/Pranau-R/Cloning-Repo.git/'
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit/Cloning-Repo (main)
+$ ^C
+
+Pranau@Pranau-T410 MINGW64 /e/clonegit/Cloning-Repo (main)
+$ The request was aborted: Could not create SSL/TLS secure channel.
+bash: The: command not found
