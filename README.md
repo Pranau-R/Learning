@@ -3,6 +3,10 @@ This repository contains many learning and reference files which I have created 
 
 It consists of:
 
+- C / C++ material.
+
+    These are files which consists of various c and c++ study material which will be useful for reference.
+
 - Coding standards.
 
     It is MCCI's coding standard.
