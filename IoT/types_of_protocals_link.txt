@@ -1,0 +1,7 @@
+https://www.elprocus.com/communication-protocols/#:~:text=This%20protocol%20is%20used%20to,Ex%3A%2DTelecommunications. - Types of protocol
+
+https://www.circuitbasics.com/basics-of-the-spi-communication-protocol - SPI protocol
+
+https://www.circuitbasics.com/basics-uart-communication/ - UART Protocol
+
+https://www.circuitbasics.com/basics-of-the-i2c-communication-protocol - I2C Protocol

@@ -1,0 +1,18 @@
+@startuml
+
+partition "**Compile process (simple flow)**"{
+
+    start
+
+    : Fetching core and board;
+    : Detecting and fetching libraries used;
+    : Compile sketch;
+    : Compile libraries;
+    : Complie core;
+    : Linking everything together;
+    : Firmware is generated in either .bin, .elf, .hex format;
+
+    stop
+    }
+
+@enduml
