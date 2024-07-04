@@ -1,0 +1,3 @@
+https://lora-developers.semtech.com/documentation/tech-papers-and-guides/lora-and-lorawan/
+
+https://www.techtarget.com/searchnetworking/answer/What-is-the-difference-between-LoRa-and-LoRaWAN#:~:text=LoRa%20is%20a%20modulation%20technique,to%20use%20LoRa%20for%20communication.
